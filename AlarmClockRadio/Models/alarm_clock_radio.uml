@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks" xmlns:Documentation="http://Papyrus/schemas/Documentation/_vaU6gAEYEeCIz8iAxBJnfA/0" xmlns:PortAndFlows="http://www.eclipse.org/papyrus/0.7.0/SysML/PortAndFlows" xmlns:Requirements="http://www.eclipse.org/papyrus/0.7.0/SysML/Requirements" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/papyrus/0.7.0/SysML/Blocks http://www.eclipse.org/papyrus/0.7.0/SysML#//blocks http://Papyrus/schemas/Documentation/_vaU6gAEYEeCIz8iAxBJnfA/0 pathmap://Papyrus.profile.uml#_vaU6ggEYEeCIz8iAxBJnfA http://www.eclipse.org/papyrus/0.7.0/SysML/PortAndFlows http://www.eclipse.org/papyrus/0.7.0/SysML#//portandflows http://www.eclipse.org/papyrus/0.7.0/SysML/Requirements http://www.eclipse.org/papyrus/0.7.0/SysML#//requirements">
+  <uml:Model xmi:id="_Y2Jvcaa-EeSS-5N4CryAdQ" name="SysMLmodel">
+    <packagedElement xmi:type="uml:Package" xmi:id="_aUFtEKa-EeSS-5N4CryAdQ" name="requirements">
+      <packagedElement xmi:type="uml:Class" xmi:id="_1zrOsKa-EeSS-5N4CryAdQ" name="Automated alarm clock"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="__EiWEKa-EeSS-5N4CryAdQ" name="Radio management"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_BsYiEKa_EeSS-5N4CryAdQ" name="Clock management"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_a5KQ8KcqEeSz9Jtze5TVrA" name="Radio station management"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_bAyi8KcqEeSz9Jtze5TVrA" name="Volume management"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_bJ2_YKcqEeSz9Jtze5TVrA" name="Radio frequency modes"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_bRWHcKcqEeSz9Jtze5TVrA" name="Radio frequencies"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_cJX7oKcqEeSz9Jtze5TVrA" name="Backup"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_cSWRcKcqEeSz9Jtze5TVrA" name="Voltage"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_cas8MKcqEeSz9Jtze5TVrA" name="Backup battery"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_cleBwKcqEeSz9Jtze5TVrA" name="Snooze"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_b3eTUKcqEeSz9Jtze5TVrA" name="Power"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="__6c1cKfyEeSg547Sclbcng" name="Listen to radio"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_R6n2UKfzEeSg547Sclbcng" name="Display time"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_bkRikKa-EeSS-5N4CryAdQ" name="context">
+      <packagedElement xmi:type="uml:Actor" xmi:id="_eWTNkKcnEeSz9Jtze5TVrA" name="User">
+        <ownedComment xmi:id="_JBYIQKf0EeSg547Sclbcng">
+          <body>A user of the alarm clock can be either asleep or awake</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_gqYJAKcnEeSz9Jtze5TVrA" name="Listen to the radio" clientDependency="_MkRcsKfzEeSg547Sclbcng"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_iAK3QKcnEeSz9Jtze5TVrA" name="Be awake on time with music" clientDependency="_yjD9kKfyEeSg547Sclbcng">
+        <ownedComment xmi:id="_kAAR4Kf0EeSg547Sclbcng">
+          <body>Being awake on time supposes that the correct alarm time has been set by the user</body>
+        </ownedComment>
+        <include xmi:id="_QxDN8KcpEeSz9Jtze5TVrA" addition="__JoEQKcoEeSz9Jtze5TVrA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_jcgSYKcnEeSz9Jtze5TVrA" name="Get the right time" clientDependency="_cEK5MKfzEeSg547Sclbcng">
+        <ownedComment xmi:id="_R8wu4Kf0EeSg547Sclbcng">
+          <body>Displaying the right time is a function of the &quot;clock&quot; part of the system</body>
+        </ownedComment>
+        <include xmi:id="_NqklMKcpEeSz9Jtze5TVrA" addition="__JoEQKcoEeSz9Jtze5TVrA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_GrBOkKcoEeSz9Jtze5TVrA" name="Awake user">
+        <ownedComment xmi:id="_O80zAKf0EeSg547Sclbcng">
+          <body>A user that is awake uses the alarm-clock radio as a clock or as a radio</body>
+        </ownedComment>
+        <generalization xmi:id="_UfaLgKcoEeSz9Jtze5TVrA" general="_eWTNkKcnEeSz9Jtze5TVrA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_HzercKcoEeSz9Jtze5TVrA" name="Asleep user">
+        <ownedComment xmi:id="_Mtra4Kf0EeSg547Sclbcng">
+          <body>A user that is sleeping uses the Alarm-Clock-Radio as an alarm-clock</body>
+        </ownedComment>
+        <generalization xmi:id="_T-gd4KcoEeSz9Jtze5TVrA" general="_eWTNkKcnEeSz9Jtze5TVrA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_SF59gKcoEeSz9Jtze5TVrA" name="A_awake user_listen to music" memberEnd="_SF59gacoEeSz9Jtze5TVrA _SF59hKcoEeSz9Jtze5TVrA">
+        <ownedEnd xmi:id="_SF59gacoEeSz9Jtze5TVrA" name="awake user" type="_GrBOkKcoEeSz9Jtze5TVrA" association="_SF59gKcoEeSz9Jtze5TVrA">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SF59gqcoEeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SF59g6coEeSz9Jtze5TVrA" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:id="_SF59hKcoEeSz9Jtze5TVrA" name="listen to music" type="_gqYJAKcnEeSz9Jtze5TVrA" association="_SF59gKcoEeSz9Jtze5TVrA">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SF59hacoEeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SF59hqcoEeSz9Jtze5TVrA" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_ShnpIKcoEeSz9Jtze5TVrA" name="A_awake user_get the right time" memberEnd="_ShnpIacoEeSz9Jtze5TVrA _ShnpJKcoEeSz9Jtze5TVrA">
+        <ownedEnd xmi:id="_ShnpIacoEeSz9Jtze5TVrA" name="awake user" type="_GrBOkKcoEeSz9Jtze5TVrA" association="_ShnpIKcoEeSz9Jtze5TVrA">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ShnpIqcoEeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ShnpI6coEeSz9Jtze5TVrA" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:id="_ShnpJKcoEeSz9Jtze5TVrA" name="get the right time" type="_jcgSYKcnEeSz9Jtze5TVrA" association="_ShnpIKcoEeSz9Jtze5TVrA">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ShnpJacoEeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ShnpJqcoEeSz9Jtze5TVrA" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_S3vqIKcoEeSz9Jtze5TVrA" name="A_asleep user_be awake on time" memberEnd="_S3vqIacoEeSz9Jtze5TVrA _S3vqJKcoEeSz9Jtze5TVrA">
+        <ownedEnd xmi:id="_S3vqIacoEeSz9Jtze5TVrA" name="asleep user" type="_HzercKcoEeSz9Jtze5TVrA" association="_S3vqIKcoEeSz9Jtze5TVrA">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_S3vqIqcoEeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_S3vqI6coEeSz9Jtze5TVrA" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:id="_S3vqJKcoEeSz9Jtze5TVrA" name="be awake on time" type="_iAK3QKcnEeSz9Jtze5TVrA" association="_S3vqIKcoEeSz9Jtze5TVrA">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_S3vqJacoEeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_S3vqJqcoEeSz9Jtze5TVrA" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="__JoEQKcoEeSz9Jtze5TVrA" name="Set the time" clientDependency="_NoU6sKfzEeSg547Sclbcng">
+        <ownedComment xmi:id="_fy1t4Kf0EeSg547Sclbcng">
+          <body>Getting the right time displayed supposes that the correct time has been set by the user on the clock.</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_Ux10UKehEeSRN7th8csslQ" name="Set the alarm">
+        <generalization xmi:id="_ZL6L4KehEeSRN7th8csslQ" general="__JoEQKcoEeSz9Jtze5TVrA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_VF5_0KehEeSRN7th8csslQ" name="Set the clock" classifierBehavior="_XZRVIKeXEeSRN7th8csslQ">
+        <generalization xmi:id="_Zp9Z0KehEeSRN7th8csslQ" general="__JoEQKcoEeSz9Jtze5TVrA"/>
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_XZRVIKeXEeSRN7th8csslQ" name="SetClockTime">
+          <node xmi:type="uml:ReadStructuralFeatureAction" xmi:id="_cT8fYKeXEeSRN7th8csslQ" name="Read clock time value" structuralFeature="_0phMcKcxEeSz9Jtze5TVrA">
+            <object xmi:id="_cULv8KeXEeSRN7th8csslQ" name="alarmClock" incoming="_AmENoKeYEeSRN7th8csslQ" type="_DCnVwKcuEeSz9Jtze5TVrA">
+              <upperBound xmi:type="uml:LiteralInteger" xmi:id="_AASnEKeYEeSRN7th8csslQ" name="" value="1"/>
+            </object>
+            <result xmi:id="_cULI4KeXEeSRN7th8csslQ" name="current clock time" outgoing="__Q740Ke6EeSRN7th8csslQ" type="_u4KjwKcvEeSz9Jtze5TVrA">
+              <upperBound xmi:type="uml:LiteralInteger" xmi:id="_cULI4aeXEeSRN7th8csslQ" value="1"/>
+            </result>
+          </node>
+          <node xmi:type="uml:AddStructuralFeatureValueAction" xmi:id="_kLXHkKeXEeSRN7th8csslQ" name="Update stored clockTime" outgoing="_a7zdYKe7EeSRN7th8csslQ" structuralFeature="_0phMcKcxEeSz9Jtze5TVrA">
+            <object xmi:id="_kLecUKeXEeSRN7th8csslQ" name="alarmClock" incoming="_XVxx4Ke7EeSRN7th8csslQ" type="_DCnVwKcuEeSz9Jtze5TVrA">
+              <upperBound xmi:type="uml:LiteralInteger" xmi:id="_W3ViYKe7EeSRN7th8csslQ" name="" value="1"/>
+            </object>
+            <value xmi:id="_kLdOMKeXEeSRN7th8csslQ" name="new clock time" incoming="_AUY54Ke7EeSRN7th8csslQ" type="_u4KjwKcvEeSz9Jtze5TVrA">
+              <upperBound xmi:type="uml:LiteralInteger" xmi:id="_kLd1QKeXEeSRN7th8csslQ" value="1"/>
+            </value>
+            <result xmi:id="_kLfqcKeXEeSRN7th8csslQ" name="alarmClockUpdated" type="_DCnVwKcuEeSz9Jtze5TVrA">
+              <upperBound xmi:type="uml:LiteralInteger" xmi:id="_kLfqcaeXEeSRN7th8csslQ" value="1"/>
+            </result>
+          </node>
+          <node xmi:type="uml:OpaqueAction" xmi:id="_tZlKoKeXEeSRN7th8csslQ" name="Set hours">
+            <inputValue xmi:id="_28LNUKe6EeSRN7th8csslQ" name="current clock time" incoming="__Q740Ke6EeSRN7th8csslQ">
+              <upperBound xmi:type="uml:LiteralInteger" xmi:id="_28PewKe6EeSRN7th8csslQ" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_28OQoKe6EeSRN7th8csslQ" value="1"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_28NCgKe6EeSRN7th8csslQ" value="1"/>
+            </inputValue>
+            <outputValue xmi:id="_3fG7QKe6EeSRN7th8csslQ" name="newTime" outgoing="_AAdRQKe7EeSRN7th8csslQ">
+              <upperBound xmi:type="uml:LiteralInteger" xmi:id="_3fLMsKe6EeSRN7th8csslQ" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3fJXgKe6EeSRN7th8csslQ" value="1"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3fIJYKe6EeSRN7th8csslQ" value="1"/>
+            </outputValue>
+          </node>
+          <node xmi:type="uml:OpaqueAction" xmi:id="_uOEioKeXEeSRN7th8csslQ" name="Set minutes">
+            <inputValue xmi:id="_4p4FQKe6EeSRN7th8csslQ" name="newTime" incoming="_AAdRQKe7EeSRN7th8csslQ">
+              <upperBound xmi:type="uml:LiteralInteger" xmi:id="_4p-L4Ke6EeSRN7th8csslQ" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4p7voKe6EeSRN7th8csslQ" value="1"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4p56cKe6EeSRN7th8csslQ" value="1"/>
+            </inputValue>
+            <outputValue xmi:id="_4FtoQKe6EeSRN7th8csslQ" name="new clock time" outgoing="_AUY54Ke7EeSRN7th8csslQ">
+              <upperBound xmi:type="uml:LiteralInteger" xmi:id="_4Fx5sKe6EeSRN7th8csslQ" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4FwrkKe6EeSRN7th8csslQ" value="1"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4FvdcKe6EeSRN7th8csslQ" value="1"/>
+            </outputValue>
+          </node>
+          <node xmi:type="uml:ReadSelfAction" xmi:id="_xiybsKeXEeSRN7th8csslQ" name="Read current alarm clock" incoming="_JLPTsKeYEeSRN7th8csslQ">
+            <result xmi:id="_3NMZwKeXEeSRN7th8csslQ" name="alarmClock" outgoing="_AmENoKeYEeSRN7th8csslQ _XVxx4Ke7EeSRN7th8csslQ" type="_DCnVwKcuEeSz9Jtze5TVrA">
+              <upperBound xmi:type="uml:LiteralInteger" xmi:id="_7RCCoKeXEeSRN7th8csslQ" name="" value="1"/>
+            </result>
+          </node>
+          <node xmi:type="uml:InitialNode" xmi:id="_IhzVIKeYEeSRN7th8csslQ" name="InitialNode1" outgoing="_JLPTsKeYEeSRN7th8csslQ"/>
+          <node xmi:type="uml:ActivityFinalNode" xmi:id="_aaI6wKe7EeSRN7th8csslQ" name="ActivityFinalNode1" incoming="_a7zdYKe7EeSRN7th8csslQ"/>
+          <edge xmi:type="uml:ObjectFlow" xmi:id="_AmENoKeYEeSRN7th8csslQ" name="ObjectFlow1" source="_3NMZwKeXEeSRN7th8csslQ" target="_cULv8KeXEeSRN7th8csslQ">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_AmHQ8KeYEeSRN7th8csslQ" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_AmH4AKeYEeSRN7th8csslQ" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_JLPTsKeYEeSRN7th8csslQ" name="ControlFlow1" source="_IhzVIKeYEeSRN7th8csslQ" target="_xiybsKeXEeSRN7th8csslQ">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_JLQh0KeYEeSRN7th8csslQ" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_JLRI4KeYEeSRN7th8csslQ"/>
+          </edge>
+          <edge xmi:type="uml:ObjectFlow" xmi:id="__Q740Ke6EeSRN7th8csslQ" name="ObjectFlow2" source="_cULI4KeXEeSRN7th8csslQ" target="_28LNUKe6EeSRN7th8csslQ">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="__Q-VEKe6EeSRN7th8csslQ" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="__Q_jMKe6EeSRN7th8csslQ" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ObjectFlow" xmi:id="_AAdRQKe7EeSRN7th8csslQ" name="ObjectFlow3" source="_3fG7QKe6EeSRN7th8csslQ" target="_4p4FQKe6EeSRN7th8csslQ">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_AAg7oKe7EeSRN7th8csslQ" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_AAiJwKe7EeSRN7th8csslQ" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ObjectFlow" xmi:id="_AUY54Ke7EeSRN7th8csslQ" name="ObjectFlow4" source="_4FtoQKe6EeSRN7th8csslQ" target="_kLdOMKeXEeSRN7th8csslQ">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_AUckQKe7EeSRN7th8csslQ" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_AUdLUKe7EeSRN7th8csslQ" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ObjectFlow" xmi:id="_XVxx4Ke7EeSRN7th8csslQ" name="ObjectFlow5" source="_3NMZwKeXEeSRN7th8csslQ" target="_kLecUKeXEeSRN7th8csslQ">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_XV2qYKe7EeSRN7th8csslQ" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_XV34gKe7EeSRN7th8csslQ" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_a7zdYKe7EeSRN7th8csslQ" name="ControlFlow2" source="_kLXHkKeXEeSRN7th8csslQ" target="_aaI6wKe7EeSRN7th8csslQ">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_a73HwKe7EeSRN7th8csslQ" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_a74V4Ke7EeSRN7th8csslQ"/>
+          </edge>
+        </ownedBehavior>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_yjD9kKfyEeSg547Sclbcng" name="Satisfy1" supplier="_1zrOsKa-EeSS-5N4CryAdQ" client="_iAK3QKcnEeSz9Jtze5TVrA"/>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_MkRcsKfzEeSg547Sclbcng" name="Satisfy2" supplier="__6c1cKfyEeSg547Sclbcng" client="_gqYJAKcnEeSz9Jtze5TVrA"/>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_NoU6sKfzEeSg547Sclbcng" name="Satisfy3" supplier="_BsYiEKa_EeSS-5N4CryAdQ" client="__JoEQKcoEeSz9Jtze5TVrA"/>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_cEK5MKfzEeSg547Sclbcng" name="Satisfy4" supplier="_R6n2UKfzEeSg547Sclbcng" client="_jcgSYKcnEeSz9Jtze5TVrA"/>
+      <profileApplication xmi:id="_JBqcIKf0EeSg547Sclbcng">
+        <eAnnotations xmi:id="_JCzroKf0EeSg547Sclbcng" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="pathmap://Papyrus.profile.uml#_vaU6ggEYEeCIz8iAxBJnfA"/>
+        </eAnnotations>
+        <appliedProfile href="pathmap://Papyrus.profile.uml#_H9068AEYEeCIz8iAxBJnfA"/>
+      </profileApplication>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_nWsnwKa-EeSS-5N4CryAdQ" name="structure">
+      <packagedElement xmi:type="uml:Class" xmi:id="_Brqw8KcuEeSz9Jtze5TVrA" name="AlarmClockRadio">
+        <ownedAttribute xmi:id="_QOoEEKcuEeSz9Jtze5TVrA" name="radio" type="_D_UOkKcuEeSz9Jtze5TVrA" aggregation="composite" association="_QOln0KcuEeSz9Jtze5TVrA">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QOoEEacuEeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QOoEEqcuEeSz9Jtze5TVrA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_RASKgacuEeSz9Jtze5TVrA" name="alarmclock" type="_DCnVwKcuEeSz9Jtze5TVrA" aggregation="composite" association="_RAQVUKcuEeSz9Jtze5TVrA">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RASKgqcuEeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RASKg6cuEeSz9Jtze5TVrA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_B8KxcKc2EeSz9Jtze5TVrA" name="alarm ON/OFF button" type="_eWTNkKcnEeSz9Jtze5TVrA" aggregation="composite">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_B8N0wKc2EeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_B8MmoKc2EeSz9Jtze5TVrA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_1cC4wKc1EeSz9Jtze5TVrA" name="radio ON/OFF button" type="_eWTNkKcnEeSz9Jtze5TVrA" aggregation="composite">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1cGjIKc1EeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1cFVAKc1EeSz9Jtze5TVrA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_g2ZN8Kc2EeSz9Jtze5TVrA" name="radio " type="_WG9FMKc1EeSz9Jtze5TVrA" aggregation="composite">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_g2dfYKc2EeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_g2cRQKc2EeSz9Jtze5TVrA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_lAaXUKc2EeSz9Jtze5TVrA" name="powerSupply" type="_aiT2MKc1EeSz9Jtze5TVrA" aggregation="composite">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lAdaoKc2EeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lAcMgKc2EeSz9Jtze5TVrA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_oUq9YKc2EeSz9Jtze5TVrA" name="soundSystem" type="_UpvgUKc1EeSz9Jtze5TVrA" aggregation="composite">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oUunwKc2EeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oUtZoKc2EeSz9Jtze5TVrA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_1AnEgKc2EeSz9Jtze5TVrA" name="display" type="_5MX6UKc2EeSz9Jtze5TVrA" aggregation="composite">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1AqH0Kc2EeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1Ao5sKc2EeSz9Jtze5TVrA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_lRYgoKc4EeSz9Jtze5TVrA" name="transformer" type="_o_lQsKc4EeSz9Jtze5TVrA" aggregation="composite" association="_o_rXUKc4EeSz9Jtze5TVrA">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_o_i0cKc4EeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_o_hmUKc4EeSz9Jtze5TVrA" value="1"/>
+        </ownedAttribute>
+        <ownedConnector xmi:id="_76UR0Kc3EeSz9Jtze5TVrA" name="connector1">
+          <end xmi:id="_76WHAKc3EeSz9Jtze5TVrA" role="_B8KxcKc2EeSz9Jtze5TVrA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_76WHAac3EeSz9Jtze5TVrA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_76WHAqc3EeSz9Jtze5TVrA" value="1"/>
+          </end>
+          <end xmi:id="_76WHA6c3EeSz9Jtze5TVrA" role="_yWBREKc3EeSz9Jtze5TVrA" partWithPort="_RASKgacuEeSz9Jtze5TVrA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_76WHBKc3EeSz9Jtze5TVrA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_76WHBac3EeSz9Jtze5TVrA" value="1"/>
+          </end>
+        </ownedConnector>
+        <ownedConnector xmi:id="_-ALyIKc3EeSz9Jtze5TVrA" name="connector2">
+          <end xmi:id="_-ANnUKc3EeSz9Jtze5TVrA" role="_1cC4wKc1EeSz9Jtze5TVrA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-ANnUac3EeSz9Jtze5TVrA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-ANnUqc3EeSz9Jtze5TVrA" value="1"/>
+          </end>
+          <end xmi:id="_-AOOYKc3EeSz9Jtze5TVrA" role="_zt7fMKc3EeSz9Jtze5TVrA" partWithPort="_QOoEEKcuEeSz9Jtze5TVrA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-AOOYac3EeSz9Jtze5TVrA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-AOOYqc3EeSz9Jtze5TVrA" value="1"/>
+          </end>
+        </ownedConnector>
+        <ownedConnector xmi:id="_PguQsKc4EeSz9Jtze5TVrA" name="connector3">
+          <end xmi:id="_PgwF4Kc4EeSz9Jtze5TVrA" role="_g2ZN8Kc2EeSz9Jtze5TVrA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PgwF4ac4EeSz9Jtze5TVrA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PgwF4qc4EeSz9Jtze5TVrA" value="1"/>
+          </end>
+          <end xmi:id="_Pgws8Kc4EeSz9Jtze5TVrA" role="_My-4EKc4EeSz9Jtze5TVrA" partWithPort="_QOoEEKcuEeSz9Jtze5TVrA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Pgws8ac4EeSz9Jtze5TVrA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Pgws8qc4EeSz9Jtze5TVrA" value="1"/>
+          </end>
+        </ownedConnector>
+        <ownedConnector xmi:id="_UA5QQKc4EeSz9Jtze5TVrA" name="connector4">
+          <end xmi:id="_UA7FcKc4EeSz9Jtze5TVrA" role="_QrbJQKc4EeSz9Jtze5TVrA" partWithPort="_QOoEEKcuEeSz9Jtze5TVrA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UA7Fcac4EeSz9Jtze5TVrA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UA7Fcqc4EeSz9Jtze5TVrA" value="1"/>
+          </end>
+          <end xmi:id="_UA7sgKc4EeSz9Jtze5TVrA" role="_oUq9YKc2EeSz9Jtze5TVrA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UA7sgac4EeSz9Jtze5TVrA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UA7sgqc4EeSz9Jtze5TVrA" value="1"/>
+          </end>
+        </ownedConnector>
+        <ownedConnector xmi:id="_WF1jgKc4EeSz9Jtze5TVrA" name="connector5">
+          <end xmi:id="_WF3YsKc4EeSz9Jtze5TVrA" role="_EC14IKc4EeSz9Jtze5TVrA" partWithPort="_RASKgacuEeSz9Jtze5TVrA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WF3Ysac4EeSz9Jtze5TVrA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WF3Ysqc4EeSz9Jtze5TVrA" value="1"/>
+          </end>
+          <end xmi:id="_WF3_wKc4EeSz9Jtze5TVrA" role="_1AnEgKc2EeSz9Jtze5TVrA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WF3_wac4EeSz9Jtze5TVrA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WF3_wqc4EeSz9Jtze5TVrA" value="1"/>
+          </end>
+        </ownedConnector>
+        <ownedConnector xmi:id="_sc66QKc4EeSz9Jtze5TVrA" name="connector6">
+          <end xmi:id="_sc8vcKc4EeSz9Jtze5TVrA" role="_lAaXUKc2EeSz9Jtze5TVrA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sc8vcac4EeSz9Jtze5TVrA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sc8vcqc4EeSz9Jtze5TVrA" value="1"/>
+          </end>
+          <end xmi:id="_sc9WgKc4EeSz9Jtze5TVrA" role="_quTcUKc4EeSz9Jtze5TVrA" partWithPort="_lRYgoKc4EeSz9Jtze5TVrA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sc9Wgac4EeSz9Jtze5TVrA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sc9Wgqc4EeSz9Jtze5TVrA" value="1"/>
+          </end>
+        </ownedConnector>
+        <ownedConnector xmi:id="_BFUhoKc5EeSz9Jtze5TVrA" name="connector7">
+          <end xmi:id="_BFWW0Kc5EeSz9Jtze5TVrA" role="_6lQG4Kc4EeSz9Jtze5TVrA" partWithPort="_lRYgoKc4EeSz9Jtze5TVrA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BFWW0ac5EeSz9Jtze5TVrA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BFWW0qc5EeSz9Jtze5TVrA" value="1"/>
+          </end>
+          <end xmi:id="_BFW94Kc5EeSz9Jtze5TVrA" role="_-6bXYKc4EeSz9Jtze5TVrA" partWithPort="_QOoEEKcuEeSz9Jtze5TVrA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BFW94ac5EeSz9Jtze5TVrA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BFW94qc5EeSz9Jtze5TVrA" value="1"/>
+          </end>
+        </ownedConnector>
+        <ownedConnector xmi:id="_F3oaEKc5EeSz9Jtze5TVrA" name="connector8">
+          <end xmi:id="_F3qPQKc5EeSz9Jtze5TVrA" role="_6lQG4Kc4EeSz9Jtze5TVrA" partWithPort="_lRYgoKc4EeSz9Jtze5TVrA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F3qPQac5EeSz9Jtze5TVrA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F3qPQqc5EeSz9Jtze5TVrA" value="1"/>
+          </end>
+          <end xmi:id="_F3q2UKc5EeSz9Jtze5TVrA" role="_DZZdEKc5EeSz9Jtze5TVrA" partWithPort="_RASKgacuEeSz9Jtze5TVrA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F3q2Uac5EeSz9Jtze5TVrA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F3q2Uqc5EeSz9Jtze5TVrA" value="1"/>
+          </end>
+        </ownedConnector>
+        <ownedConnector xmi:id="_sRKEQKc6EeSz9Jtze5TVrA" name="connector10">
+          <end xmi:id="_sRMggKc6EeSz9Jtze5TVrA" role="_RASKgacuEeSz9Jtze5TVrA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sRMggac6EeSz9Jtze5TVrA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sRMggqc6EeSz9Jtze5TVrA" value="1"/>
+          </end>
+          <end xmi:id="_sRMgg6c6EeSz9Jtze5TVrA" role="_QOoEEKcuEeSz9Jtze5TVrA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sRMghKc6EeSz9Jtze5TVrA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sRMghac6EeSz9Jtze5TVrA" value="1"/>
+          </end>
+        </ownedConnector>
+        <ownedOperation xmi:id="_X580MKcyEeSz9Jtze5TVrA" name="plug" clientDependency="_vqq-sKfzEeSg547Sclbcng"/>
+        <ownedOperation xmi:id="_ZFjrsKcyEeSz9Jtze5TVrA" name="unplug" clientDependency="_wHqcsKfzEeSg547Sclbcng"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_DCnVwKcuEeSz9Jtze5TVrA" name="AlarmClock">
+        <ownedAttribute xmi:id="_7-760KcxEeSz9Jtze5TVrA" name="alarmTime" type="_u4KjwKcvEeSz9Jtze5TVrA">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7--XEKcxEeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7-9I8KcxEeSz9Jtze5TVrA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_0phMcKcxEeSz9Jtze5TVrA" name="clockTime" type="_u4KjwKcvEeSz9Jtze5TVrA">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0pjBoKcxEeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0piakKcxEeSz9Jtze5TVrA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_yWBREKc3EeSz9Jtze5TVrA" name="alarm ON/OFF button" type="_eWTNkKcnEeSz9Jtze5TVrA" aggregation="composite">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yWEUYKc3EeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yWDGQKc3EeSz9Jtze5TVrA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_EC14IKc4EeSz9Jtze5TVrA" name="display" type="_5MX6UKc2EeSz9Jtze5TVrA" aggregation="composite">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EC5igKc4EeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EC4UYKc4EeSz9Jtze5TVrA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_DZZdEKc5EeSz9Jtze5TVrA" name="power" type="_0b7_QKc4EeSz9Jtze5TVrA" aggregation="composite">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DZdHcKc5EeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DZb5UKc5EeSz9Jtze5TVrA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="__dYeAKc5EeSz9Jtze5TVrA" name="clock" type="_AbNYMKc6EeSz9Jtze5TVrA" aggregation="composite" association="_AbRpoKc6EeSz9Jtze5TVrA">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AbLjAKc6EeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AbK78Kc6EeSz9Jtze5TVrA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_D8GsEKc6EeSz9Jtze5TVrA" name="displayer" type="_EjteoKc6EeSz9Jtze5TVrA" aggregation="composite" association="_EjxwEKc6EeSz9Jtze5TVrA">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EjrCYKc6EeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EjqbUKc6EeSz9Jtze5TVrA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_M95AMKc7EeSz9Jtze5TVrA" name="backupBattery" type="_Y-dhAKc5EeSz9Jtze5TVrA" association="_PEk_4Kc7EeSz9Jtze5TVrA">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PEh8kKc7EeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PEgucKc7EeSz9Jtze5TVrA" value="1"/>
+        </ownedAttribute>
+        <ownedConnector xmi:id="_Xrd9MKc7EeSz9Jtze5TVrA" name="connector1">
+          <end xmi:id="_XrgZcKc7EeSz9Jtze5TVrA" role="_byAmsKc5EeSz9Jtze5TVrA" partWithPort="_M95AMKc7EeSz9Jtze5TVrA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XrgZcac7EeSz9Jtze5TVrA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XrgZcqc7EeSz9Jtze5TVrA" value="1"/>
+          </end>
+          <end xmi:id="_XrgZc6c7EeSz9Jtze5TVrA" role="_TbANkKc7EeSz9Jtze5TVrA" partWithPort="__dYeAKc5EeSz9Jtze5TVrA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XrgZdKc7EeSz9Jtze5TVrA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XrgZdac7EeSz9Jtze5TVrA" value="1"/>
+          </end>
+        </ownedConnector>
+        <ownedConnector xmi:id="_YXVksKc7EeSz9Jtze5TVrA" name="connector2">
+          <end xmi:id="_YXYoAKc7EeSz9Jtze5TVrA" role="_DZZdEKc5EeSz9Jtze5TVrA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YXYoAac7EeSz9Jtze5TVrA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YXYoAqc7EeSz9Jtze5TVrA" value="1"/>
+          </end>
+          <end xmi:id="_YXZPEKc7EeSz9Jtze5TVrA" role="_TbANkKc7EeSz9Jtze5TVrA" partWithPort="__dYeAKc5EeSz9Jtze5TVrA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YXZPEac7EeSz9Jtze5TVrA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YXZPEqc7EeSz9Jtze5TVrA" value="1"/>
+          </end>
+        </ownedConnector>
+        <ownedConnector xmi:id="_eprsgKc7EeSz9Jtze5TVrA" name="connector3">
+          <end xmi:id="_epuIwKc7EeSz9Jtze5TVrA" role="_cPRfkKc7EeSz9Jtze5TVrA" partWithPort="_D8GsEKc6EeSz9Jtze5TVrA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_epuIwac7EeSz9Jtze5TVrA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_epuIwqc7EeSz9Jtze5TVrA" value="1"/>
+          </end>
+          <end xmi:id="_epuIw6c7EeSz9Jtze5TVrA" role="_EC14IKc4EeSz9Jtze5TVrA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_epuIxKc7EeSz9Jtze5TVrA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_epuIxac7EeSz9Jtze5TVrA" value="1"/>
+          </end>
+        </ownedConnector>
+        <ownedConnector xmi:id="_ybxW8Kc7EeSz9Jtze5TVrA" name="connector4">
+          <end xmi:id="_yb0aQKc7EeSz9Jtze5TVrA" role="_r5adMKc7EeSz9Jtze5TVrA" partWithPort="__dYeAKc5EeSz9Jtze5TVrA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yb0aQac7EeSz9Jtze5TVrA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yb0aQqc7EeSz9Jtze5TVrA" value="1"/>
+          </end>
+          <end xmi:id="_yb0aQ6c7EeSz9Jtze5TVrA" role="_otTGgKc7EeSz9Jtze5TVrA" partWithPort="_D8GsEKc6EeSz9Jtze5TVrA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yb0aRKc7EeSz9Jtze5TVrA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yb0aRac7EeSz9Jtze5TVrA" value="1"/>
+          </end>
+        </ownedConnector>
+        <ownedConnector xmi:id="_2jy8QKc7EeSz9Jtze5TVrA" name="connector5">
+          <end xmi:id="_2j1YgKc7EeSz9Jtze5TVrA" role="_DZZdEKc5EeSz9Jtze5TVrA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2j1Ygac7EeSz9Jtze5TVrA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2j1Ygqc7EeSz9Jtze5TVrA" value="1"/>
+          </end>
+          <end xmi:id="_2j1Yg6c7EeSz9Jtze5TVrA" role="_0fN1YKc7EeSz9Jtze5TVrA" partWithPort="_D8GsEKc6EeSz9Jtze5TVrA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2j1YhKc7EeSz9Jtze5TVrA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2j1Yhac7EeSz9Jtze5TVrA" value="1"/>
+          </end>
+        </ownedConnector>
+        <ownedOperation xmi:id="_kthNUKcyEeSz9Jtze5TVrA" name="setClockTime">
+          <ownedParameter xmi:id="_yAUOMKc0EeSz9Jtze5TVrA" name="h">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_68RckKc0EeSz9Jtze5TVrA" name="m">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_mIXasKcyEeSz9Jtze5TVrA" name="setAlarmTime">
+          <ownedParameter xmi:id="_CIvqUKc1EeSz9Jtze5TVrA" name="h">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_EzCGUKc1EeSz9Jtze5TVrA" name="m">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_mbsmYKcyEeSz9Jtze5TVrA" name="unableAlarm"/>
+        <ownedOperation xmi:id="_Jv-hcKc1EeSz9Jtze5TVrA" name="disableAlarm"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_AbNYMKc6EeSz9Jtze5TVrA" name="Clock">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_TbANkKc7EeSz9Jtze5TVrA" name="power" type="_0b7_QKc4EeSz9Jtze5TVrA" aggregation="composite">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TbD38Kc7EeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TbCCwKc7EeSz9Jtze5TVrA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_r5adMKc7EeSz9Jtze5TVrA" name="currentTime" type="_u4KjwKcvEeSz9Jtze5TVrA" aggregation="composite">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_r5euoKc7EeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_r5c5cKc7EeSz9Jtze5TVrA" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_D_UOkKcuEeSz9Jtze5TVrA" name="Radio" classifierBehavior="_fmqAMKc9EeSz9Jtze5TVrA">
+        <ownedAttribute xmi:id="_3IxAoKcyEeSz9Jtze5TVrA" name="frequencyMode" type="_yJzzUKcyEeSz9Jtze5TVrA">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3Iy10KcyEeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3IyOwKcyEeSz9Jtze5TVrA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_5zloIKcyEeSz9Jtze5TVrA" name="frequency" type="_CoMRUKczEeSz9Jtze5TVrA">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5zoEYKcyEeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5zndUKcyEeSz9Jtze5TVrA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_UDhfwKczEeSz9Jtze5TVrA" name="volume">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UDit4aczEeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UDit4KczEeSz9Jtze5TVrA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_zt7fMKc3EeSz9Jtze5TVrA" name="radio ON/OFF button" type="_eWTNkKcnEeSz9Jtze5TVrA" aggregation="composite">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zt-igKc3EeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zt9UYKc3EeSz9Jtze5TVrA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_My-4EKc4EeSz9Jtze5TVrA" name="radio" type="_WG9FMKc1EeSz9Jtze5TVrA" aggregation="composite">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MzB7YKc4EeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MzAtQKc4EeSz9Jtze5TVrA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_QrbJQKc4EeSz9Jtze5TVrA" name="soundSystem" type="_UpvgUKc1EeSz9Jtze5TVrA" aggregation="composite">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QrezoKc4EeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QrdlgKc4EeSz9Jtze5TVrA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_-6bXYKc4EeSz9Jtze5TVrA" name="power" type="_0b7_QKc4EeSz9Jtze5TVrA" aggregation="composite">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-6easKc4EeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-6dMkKc4EeSz9Jtze5TVrA" value="1"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_fmqAMKc9EeSz9Jtze5TVrA" name="Radio_stateMachine">
+          <region xmi:id="_gcL6AKc9EeSz9Jtze5TVrA" name="Region1">
+            <subvertex xmi:type="uml:State" xmi:id="_hLIqsKc9EeSz9Jtze5TVrA" name="Radio_ON"/>
+            <subvertex xmi:type="uml:State" xmi:id="_iXHVoKc9EeSz9Jtze5TVrA" name="Radio_OFF"/>
+            <subvertex xmi:type="uml:State" xmi:id="_8soQ0Kc9EeSz9Jtze5TVrA" name="Radio_AUTO">
+              <region xmi:id="_AYSDMKc-EeSz9Jtze5TVrA" name="Region0">
+                <subvertex xmi:type="uml:State" xmi:id="_AYYJ0Kc-EeSz9Jtze5TVrA" name="Sound_OFF "/>
+                <subvertex xmi:type="uml:Pseudostate" xmi:id="_A3GtMKc-EeSz9Jtze5TVrA" name="Initial0"/>
+                <subvertex xmi:type="uml:State" xmi:id="_E3q_oKc-EeSz9Jtze5TVrA" name="Alarm_ON "/>
+                <subvertex xmi:type="uml:State" xmi:id="_C1JRwKc_EeSz9Jtze5TVrA" name="Alarm_SNOOZE"/>
+                <transition xmi:id="_I8zpAKc-EeSz9Jtze5TVrA" name="" source="_A3GtMKc-EeSz9Jtze5TVrA" target="_AYYJ0Kc-EeSz9Jtze5TVrA"/>
+                <transition xmi:id="_Jz6QIKc-EeSz9Jtze5TVrA" name="alarmTime = currentTime" source="_AYYJ0Kc-EeSz9Jtze5TVrA" target="_E3q_oKc-EeSz9Jtze5TVrA">
+                  <ownedRule xmi:type="uml:TimeConstraint" xmi:id="_bRm2EKc-EeSz9Jtze5TVrA" name="Time(alarm) = currentTime"/>
+                </transition>
+                <transition xmi:id="_AVhNoKc_EeSz9Jtze5TVrA" name="after 59min" source="_E3q_oKc-EeSz9Jtze5TVrA" target="_AYYJ0Kc-EeSz9Jtze5TVrA"/>
+                <transition xmi:id="_KE418Kc_EeSz9Jtze5TVrA" name="activate &quot;snooze&quot;" source="_E3q_oKc-EeSz9Jtze5TVrA" target="_C1JRwKc_EeSz9Jtze5TVrA"/>
+                <transition xmi:id="_OXIHMKc_EeSz9Jtze5TVrA" name="after 9min" source="_C1JRwKc_EeSz9Jtze5TVrA" target="_E3q_oKc-EeSz9Jtze5TVrA"/>
+              </region>
+            </subvertex>
+            <transition xmi:id="_jvMGYKc-EeSz9Jtze5TVrA" name="power OFF" source="_hLIqsKc9EeSz9Jtze5TVrA" target="_iXHVoKc9EeSz9Jtze5TVrA"/>
+            <transition xmi:id="_ukOWQKc-EeSz9Jtze5TVrA" name="power ON" source="_iXHVoKc9EeSz9Jtze5TVrA" target="_hLIqsKc9EeSz9Jtze5TVrA"/>
+            <transition xmi:id="_w0QfMKc-EeSz9Jtze5TVrA" name="power AUTO" source="_iXHVoKc9EeSz9Jtze5TVrA" target="_8soQ0Kc9EeSz9Jtze5TVrA"/>
+            <transition xmi:id="_3wiU0Kc-EeSz9Jtze5TVrA" name="power OFF" source="_8soQ0Kc9EeSz9Jtze5TVrA" target="_iXHVoKc9EeSz9Jtze5TVrA"/>
+            <transition xmi:id="_6IGpIKc-EeSz9Jtze5TVrA" name="power ON" source="_8soQ0Kc9EeSz9Jtze5TVrA" target="_hLIqsKc9EeSz9Jtze5TVrA"/>
+            <transition xmi:id="_9EmPcKc-EeSz9Jtze5TVrA" name="power AUTO" source="_hLIqsKc9EeSz9Jtze5TVrA" target="_8soQ0Kc9EeSz9Jtze5TVrA"/>
+          </region>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_wQnAkKczEeSz9Jtze5TVrA" name="updateRadioStation">
+          <ownedParameter xmi:id="_1ViTAKczEeSz9Jtze5TVrA" name="f" type="_CoMRUKczEeSz9Jtze5TVrA"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_9qPUIKczEeSz9Jtze5TVrA" name="updateVolume">
+          <ownedParameter xmi:id="_CB-JYKc0EeSz9Jtze5TVrA" name="v">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_QOln0KcuEeSz9Jtze5TVrA" name="Association1" memberEnd="_QOoEEKcuEeSz9Jtze5TVrA _QOorIKcuEeSz9Jtze5TVrA">
+        <eAnnotations xmi:id="_QOm18KcuEeSz9Jtze5TVrA" source="org.eclipse.papyrus">
+          <details xmi:id="_QOndAKcuEeSz9Jtze5TVrA" key="nature" value="SysML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:id="_QOorIKcuEeSz9Jtze5TVrA" name="alarmclockradio" type="_Brqw8KcuEeSz9Jtze5TVrA" association="_QOln0KcuEeSz9Jtze5TVrA">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QOorIacuEeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QOorIqcuEeSz9Jtze5TVrA" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_RAQVUKcuEeSz9Jtze5TVrA" name="Association2" memberEnd="_RASKgacuEeSz9Jtze5TVrA _RASxkKcuEeSz9Jtze5TVrA">
+        <eAnnotations xmi:id="_RARjcKcuEeSz9Jtze5TVrA" source="org.eclipse.papyrus">
+          <details xmi:id="_RASKgKcuEeSz9Jtze5TVrA" key="nature" value="SysML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:id="_RASxkKcuEeSz9Jtze5TVrA" name="alarmclockradio" type="_Brqw8KcuEeSz9Jtze5TVrA" association="_RAQVUKcuEeSz9Jtze5TVrA">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RASxkacuEeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RASxkqcuEeSz9Jtze5TVrA" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_rTS5YKcwEeSz9Jtze5TVrA" name="valueTypes">
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_wSSN0KcuEeSz9Jtze5TVrA" name="Time"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_u4KjwKcvEeSz9Jtze5TVrA" name="DisplayedTime">
+          <ownedAttribute xmi:id="_xQtvgKcvEeSz9Jtze5TVrA" name="hour" type="_ik6joKeWEeSRN7th8csslQ">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xQuWkacvEeSz9Jtze5TVrA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xQuWkKcvEeSz9Jtze5TVrA" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_0exm8KcvEeSz9Jtze5TVrA" name="minute">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0eyOAacvEeSz9Jtze5TVrA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0eyOAKcvEeSz9Jtze5TVrA" value="1"/>
+          </ownedAttribute>
+        </packagedElement>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_CoMRUKczEeSz9Jtze5TVrA" name="Frequency"/>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_Dy37wKczEeSz9Jtze5TVrA" name="Frequency"/>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_Ejm1IKczEeSz9Jtze5TVrA" name="MHz"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_UpvgUKc1EeSz9Jtze5TVrA" name="Sound"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_WG9FMKc1EeSz9Jtze5TVrA" name="HF Signal"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_aiT2MKc1EeSz9Jtze5TVrA" name="AC Power"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_5MX6UKc2EeSz9Jtze5TVrA" name="Light"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_0b7_QKc4EeSz9Jtze5TVrA" name="DC Power"/>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_ZmWGIKeWEeSRN7th8csslQ" name="Hour"/>
+        <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_aPi0IKeWEeSRN7th8csslQ" name="Minute"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_ik6joKeWEeSRN7th8csslQ" name="ValueType1"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_yJzzUKcyEeSz9Jtze5TVrA" name="FrequencyMode">
+        <ownedLiteral xmi:id="_zGNxMKcyEeSz9Jtze5TVrA" name="AM"/>
+        <ownedLiteral xmi:id="_0gTJkKcyEeSz9Jtze5TVrA" name="FM"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_vMAeEKc1EeSz9Jtze5TVrA" name="Association3" memberEnd="_vMAeE6c1EeSz9Jtze5TVrA">
+        <eAnnotations xmi:id="_vMAeEac1EeSz9Jtze5TVrA" source="org.eclipse.papyrus">
+          <details xmi:id="_vMAeEqc1EeSz9Jtze5TVrA" key="nature" value="SysML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:id="_vMAeE6c1EeSz9Jtze5TVrA" name="" type="_Brqw8KcuEeSz9Jtze5TVrA" association="_vMAeEKc1EeSz9Jtze5TVrA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_o_lQsKc4EeSz9Jtze5TVrA" name="Transformer">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_quTcUKc4EeSz9Jtze5TVrA" name="power" type="_aiT2MKc1EeSz9Jtze5TVrA" aggregation="composite">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_quV4kKc4EeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_quVRgKc4EeSz9Jtze5TVrA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_6lQG4Kc4EeSz9Jtze5TVrA" name="power" type="_0b7_QKc4EeSz9Jtze5TVrA" aggregation="composite">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6lTxQKc4EeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6lSjIKc4EeSz9Jtze5TVrA" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_o_rXUKc4EeSz9Jtze5TVrA" name="Association4" memberEnd="_lRYgoKc4EeSz9Jtze5TVrA _o_rXU6c4EeSz9Jtze5TVrA">
+        <eAnnotations xmi:id="_o_rXUac4EeSz9Jtze5TVrA" source="org.eclipse.papyrus">
+          <details xmi:id="_o_rXUqc4EeSz9Jtze5TVrA" key="nature" value="SysML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:id="_o_rXU6c4EeSz9Jtze5TVrA" name="" type="_Brqw8KcuEeSz9Jtze5TVrA" association="_o_rXUKc4EeSz9Jtze5TVrA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Y-dhAKc5EeSz9Jtze5TVrA" name="BackupBattery">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_byAmsKc5EeSz9Jtze5TVrA" name="power" type="_0b7_QKc4EeSz9Jtze5TVrA" aggregation="composite">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_byEREKc5EeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_byDC8Kc5EeSz9Jtze5TVrA" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_AbRpoKc6EeSz9Jtze5TVrA" name="Association6" memberEnd="__dYeAKc5EeSz9Jtze5TVrA _AbRpo6c6EeSz9Jtze5TVrA">
+        <eAnnotations xmi:id="_AbRpoac6EeSz9Jtze5TVrA" source="org.eclipse.papyrus">
+          <details xmi:id="_AbRpoqc6EeSz9Jtze5TVrA" key="nature" value="SysML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:id="_AbRpo6c6EeSz9Jtze5TVrA" name="" type="_DCnVwKcuEeSz9Jtze5TVrA" association="_AbRpoKc6EeSz9Jtze5TVrA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_EjteoKc6EeSz9Jtze5TVrA" name="Displayer">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_cPRfkKc7EeSz9Jtze5TVrA" name="display" type="_5MX6UKc2EeSz9Jtze5TVrA" aggregation="composite">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cPVxAKc7EeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cPT70Kc7EeSz9Jtze5TVrA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_otTGgKc7EeSz9Jtze5TVrA" name="time" type="_u4KjwKcvEeSz9Jtze5TVrA" aggregation="composite">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_otWw4Kc7EeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_otViwKc7EeSz9Jtze5TVrA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_0fN1YKc7EeSz9Jtze5TVrA" name="power" type="_0b7_QKc4EeSz9Jtze5TVrA" aggregation="composite">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0fSG0Kc7EeSz9Jtze5TVrA" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0fQRoKc7EeSz9Jtze5TVrA" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_EjxwEKc6EeSz9Jtze5TVrA" name="Association7" memberEnd="_D8GsEKc6EeSz9Jtze5TVrA _EjxwE6c6EeSz9Jtze5TVrA">
+        <eAnnotations xmi:id="_EjxwEac6EeSz9Jtze5TVrA" source="org.eclipse.papyrus">
+          <details xmi:id="_EjxwEqc6EeSz9Jtze5TVrA" key="nature" value="SysML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:id="_EjxwE6c6EeSz9Jtze5TVrA" name="" type="_DCnVwKcuEeSz9Jtze5TVrA" association="_EjxwEKc6EeSz9Jtze5TVrA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_PEk_4Kc7EeSz9Jtze5TVrA" name="Association8" memberEnd="_M95AMKc7EeSz9Jtze5TVrA _PEk_46c7EeSz9Jtze5TVrA">
+        <eAnnotations xmi:id="_PEk_4ac7EeSz9Jtze5TVrA" source="org.eclipse.papyrus">
+          <details xmi:id="_PEk_4qc7EeSz9Jtze5TVrA" key="nature" value="SysML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:id="_PEk_46c7EeSz9Jtze5TVrA" name="" type="_DCnVwKcuEeSz9Jtze5TVrA" association="_PEk_4Kc7EeSz9Jtze5TVrA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_vqq-sKfzEeSg547Sclbcng" name="Satisfy1" supplier="_b3eTUKcqEeSz9Jtze5TVrA" client="_X580MKcyEeSz9Jtze5TVrA"/>
+      <packagedElement xmi:type="uml:Abstraction" xmi:id="_wHqcsKfzEeSg547Sclbcng" name="Satisfy2" supplier="_b3eTUKcqEeSz9Jtze5TVrA" client="_ZFjrsKcyEeSz9Jtze5TVrA"/>
+    </packagedElement>
+    <profileApplication xmi:id="_Y7dtQKa-EeSS-5N4CryAdQ">
+      <eAnnotations xmi:id="_Y7e7YKa-EeSS-5N4CryAdQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#/"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://SysML_PROFILES/SysML.profile.uml#_TZ_nULU5EduiKqCzJMWbGw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_ZAfXMKa-EeSS-5N4CryAdQ">
+      <eAnnotations xmi:id="_ZAf-QKa-EeSS-5N4CryAdQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#//modelelements"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://SysML_PROFILES/SysML.profile.uml#_Gx8MgLX7EduFmqQsrNB9lw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_ZAkPsKa-EeSS-5N4CryAdQ">
+      <eAnnotations xmi:id="_ZAk2wKa-EeSS-5N4CryAdQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#//blocks"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://SysML_PROFILES/SysML.profile.uml#_fSw28LX7EduFmqQsrNB9lw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_ZAk2waa-EeSS-5N4CryAdQ">
+      <eAnnotations xmi:id="_ZAk2wqa-EeSS-5N4CryAdQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#//portandflows"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://SysML_PROFILES/SysML.profile.uml#_rpx28LX7EduFmqQsrNB9lw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_ZAk2w6a-EeSS-5N4CryAdQ">
+      <eAnnotations xmi:id="_ZAk2xKa-EeSS-5N4CryAdQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#//constraints"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://SysML_PROFILES/SysML.profile.uml#_5WYJ0LX7EduFmqQsrNB9lw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_ZAk2xaa-EeSS-5N4CryAdQ">
+      <eAnnotations xmi:id="_ZAld0Ka-EeSS-5N4CryAdQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#//activities"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://SysML_PROFILES/SysML.profile.uml#_C2zXMLX8EduFmqQsrNB9lw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_ZAld0aa-EeSS-5N4CryAdQ">
+      <eAnnotations xmi:id="_ZAld0qa-EeSS-5N4CryAdQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#//allocations"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://SysML_PROFILES/SysML.profile.uml#_NxdG4LX8EduFmqQsrNB9lw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_ZAld06a-EeSS-5N4CryAdQ">
+      <eAnnotations xmi:id="_ZAld1Ka-EeSS-5N4CryAdQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#//requirements"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://SysML_PROFILES/SysML.profile.uml#_OOJC4LX8EduFmqQsrNB9lw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_ZAmE4Ka-EeSS-5N4CryAdQ">
+      <eAnnotations xmi:id="_ZAmE4aa-EeSS-5N4CryAdQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#//interactions"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://SysML_PROFILES/SysML.profile.uml#_meOioLX8EduFmqQsrNB9lw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_ZAmE4qa-EeSS-5N4CryAdQ">
+      <eAnnotations xmi:id="_ZAmE46a-EeSS-5N4CryAdQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#//statemachines"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://SysML_PROFILES/SysML.profile.uml#_nAF5kLX8EduFmqQsrNB9lw"/>
+    </profileApplication>
+    <profileApplication xmi:id="_ZAmE5Ka-EeSS-5N4CryAdQ">
+      <eAnnotations xmi:id="_ZAmr8Ka-EeSS-5N4CryAdQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/0.7.0/SysML#//usecases"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://SysML_PROFILES/SysML.profile.uml#_neZmMLX8EduFmqQsrNB9lw"/>
+    </profileApplication>
+  </uml:Model>
+  <Requirements:Requirement xmi:id="_1z8UcKa-EeSS-5N4CryAdQ" text="The alarm clock radio shall wake up the user automatically at the right time, through radio or buzzer." id="REQ_001" base_Class="_1zrOsKa-EeSS-5N4CryAdQ"/>
+  <Requirements:Requirement xmi:id="__ElZYKa-EeSS-5N4CryAdQ" text="The user shall be able to modify easily the radio station and the volume." id="REQ_002" base_Class="__EiWEKa-EeSS-5N4CryAdQ"/>
+  <Requirements:Requirement xmi:id="_BsblYKa_EeSS-5N4CryAdQ" text="The user shall be able to update easily the time displayed by the clock or the alarm." id="REQ_003" base_Class="_BsYiEKa_EeSS-5N4CryAdQ"/>
+  <Requirements:Requirement xmi:id="_a5m84KcqEeSz9Jtze5TVrA" text="The user shall be able to modify easily the radio station." id="REQ_004" base_Class="_a5KQ8KcqEeSz9Jtze5TVrA"/>
+  <Requirements:Requirement xmi:id="_bA7s4KcqEeSz9Jtze5TVrA" text="The user shall be able to modify easily the volume." id="REQ_005" base_Class="_bAyi8KcqEeSz9Jtze5TVrA"/>
+  <Requirements:Requirement xmi:id="_bKAJUKcqEeSz9Jtze5TVrA" text="The alarm clock radio shall provide a way to select either AM or FM frequencies for radio." id="REQ_006" base_Class="_bJ2_YKcqEeSz9Jtze5TVrA"/>
+  <Requirements:Requirement xmi:id="_bRfRYKcqEeSz9Jtze5TVrA" text="FM frequencies shall be between 88MHz and 108MHz and AM frequencies shall be between 5300kHz and 1600kHz." id="REQ_007" base_Class="_bRWHcKcqEeSz9Jtze5TVrA"/>
+  <Requirements:Requirement xmi:id="_b3ndQKcqEeSz9Jtze5TVrA" text="The alarm clock radio shall be plugged for power supply." id="REQ_008" base_Class="_b3eTUKcqEeSz9Jtze5TVrA"/>
+  <Requirements:Requirement xmi:id="_cJf3cKcqEeSz9Jtze5TVrA" text="A backup battery shall keep the settings, even when power is off." id="REQ_009" base_Class="_cJX7oKcqEeSz9Jtze5TVrA"/>
+  <Requirements:Requirement xmi:id="_cSe0UKcqEeSz9Jtze5TVrA" text="The alarm clock voltage shall be 230V – 50Hz." id="REQ_010" base_Class="_cSWRcKcqEeSz9Jtze5TVrA"/>
+  <Requirements:Requirement xmi:id="_ca2GIKcqEeSz9Jtze5TVrA" text="The backup battery shall be a 9V battery." id="REQ_011" base_Class="_cas8MKcqEeSz9Jtze5TVrA"/>
+  <Requirements:Requirement xmi:id="_clnLsKcqEeSz9Jtze5TVrA" text="Hitting the snooze button during alarm shall make the alarm start again after 9 minutes." id="REQ_012" base_Class="_cleBwKcqEeSz9Jtze5TVrA"/>
+  <Blocks:Block xmi:id="_BrwQgKcuEeSz9Jtze5TVrA" base_Class="_Brqw8KcuEeSz9Jtze5TVrA"/>
+  <Blocks:Block xmi:id="_DCqZEKcuEeSz9Jtze5TVrA" base_Class="_DCnVwKcuEeSz9Jtze5TVrA"/>
+  <Blocks:Block xmi:id="_D_XR4KcuEeSz9Jtze5TVrA" base_Class="_D_UOkKcuEeSz9Jtze5TVrA"/>
+  <Blocks:Dimension xmi:id="_wTCbwKcuEeSz9Jtze5TVrA" base_InstanceSpecification="_wSSN0KcuEeSz9Jtze5TVrA"/>
+  <Blocks:ValueType xmi:id="_u4LK0KcvEeSz9Jtze5TVrA" base_DataType="_u4KjwKcvEeSz9Jtze5TVrA" dimension="_wTCbwKcuEeSz9Jtze5TVrA"/>
+  <Blocks:ValueType xmi:id="_CoPUoKczEeSz9Jtze5TVrA" base_DataType="_CoMRUKczEeSz9Jtze5TVrA" unit="_EjpRYKczEeSz9Jtze5TVrA" dimension="_Dy6YAKczEeSz9Jtze5TVrA"/>
+  <Blocks:Dimension xmi:id="_Dy6YAKczEeSz9Jtze5TVrA" base_InstanceSpecification="_Dy37wKczEeSz9Jtze5TVrA"/>
+  <Blocks:Unit xmi:id="_EjpRYKczEeSz9Jtze5TVrA" base_InstanceSpecification="_Ejm1IKczEeSz9Jtze5TVrA" dimension="_Dy6YAKczEeSz9Jtze5TVrA"/>
+  <Blocks:ValueType xmi:id="_UpzxwKc1EeSz9Jtze5TVrA" base_DataType="_UpvgUKc1EeSz9Jtze5TVrA"/>
+  <Blocks:ValueType xmi:id="_WHAIgKc1EeSz9Jtze5TVrA" base_DataType="_WG9FMKc1EeSz9Jtze5TVrA"/>
+  <Blocks:ValueType xmi:id="_aiVrYKc1EeSz9Jtze5TVrA" base_DataType="_aiT2MKc1EeSz9Jtze5TVrA"/>
+  <PortAndFlows:FlowPort xmi:id="_g3HmsKc2EeSz9Jtze5TVrA" base_Port="_g2ZN8Kc2EeSz9Jtze5TVrA" direction="in"/>
+  <PortAndFlows:FlowPort xmi:id="_lAgd8Kc2EeSz9Jtze5TVrA" base_Port="_lAaXUKc2EeSz9Jtze5TVrA" direction="in"/>
+  <PortAndFlows:FlowPort xmi:id="_oUxrEKc2EeSz9Jtze5TVrA" base_Port="_oUq9YKc2EeSz9Jtze5TVrA" direction="out"/>
+  <PortAndFlows:FlowPort xmi:id="_1AtLIKc2EeSz9Jtze5TVrA" base_Port="_1AnEgKc2EeSz9Jtze5TVrA" direction="out"/>
+  <Blocks:ValueType xmi:id="_5Ma9oKc2EeSz9Jtze5TVrA" base_DataType="_5MX6UKc2EeSz9Jtze5TVrA"/>
+  <PortAndFlows:FlowPort xmi:id="_EC8l0Kc4EeSz9Jtze5TVrA" base_Port="_EC14IKc4EeSz9Jtze5TVrA" direction="out"/>
+  <PortAndFlows:FlowPort xmi:id="_MzE-sKc4EeSz9Jtze5TVrA" base_Port="_My-4EKc4EeSz9Jtze5TVrA" direction="in"/>
+  <PortAndFlows:FlowPort xmi:id="_Qrh28Kc4EeSz9Jtze5TVrA" base_Port="_QrbJQKc4EeSz9Jtze5TVrA" direction="out"/>
+  <Blocks:Block xmi:id="_o_oUAKc4EeSz9Jtze5TVrA" base_Class="_o_lQsKc4EeSz9Jtze5TVrA"/>
+  <PortAndFlows:FlowPort xmi:id="_quYU0Kc4EeSz9Jtze5TVrA" base_Port="_quTcUKc4EeSz9Jtze5TVrA" direction="in"/>
+  <Blocks:ValueType xmi:id="_0b_poKc4EeSz9Jtze5TVrA" base_DataType="_0b7_QKc4EeSz9Jtze5TVrA"/>
+  <PortAndFlows:FlowPort xmi:id="_6lW0kKc4EeSz9Jtze5TVrA" base_Port="_6lQG4Kc4EeSz9Jtze5TVrA" direction="out"/>
+  <PortAndFlows:FlowPort xmi:id="_-6iFEKc4EeSz9Jtze5TVrA" base_Port="_-6bXYKc4EeSz9Jtze5TVrA" direction="in"/>
+  <PortAndFlows:FlowPort xmi:id="_DZgKwKc5EeSz9Jtze5TVrA" base_Port="_DZZdEKc5EeSz9Jtze5TVrA" direction="in"/>
+  <Blocks:Block xmi:id="_Y-fWMKc5EeSz9Jtze5TVrA" base_Class="_Y-dhAKc5EeSz9Jtze5TVrA"/>
+  <PortAndFlows:FlowPort xmi:id="_byH7cKc5EeSz9Jtze5TVrA" base_Port="_byAmsKc5EeSz9Jtze5TVrA" direction="out"/>
+  <Blocks:Block xmi:id="_AbPNYKc6EeSz9Jtze5TVrA" base_Class="_AbNYMKc6EeSz9Jtze5TVrA"/>
+  <Blocks:Block xmi:id="_EjvT0Kc6EeSz9Jtze5TVrA" base_Class="_EjteoKc6EeSz9Jtze5TVrA"/>
+  <PortAndFlows:FlowPort xmi:id="_TbG7QKc7EeSz9Jtze5TVrA" base_Port="_TbANkKc7EeSz9Jtze5TVrA" direction="in"/>
+  <PortAndFlows:FlowPort xmi:id="_cPZbYKc7EeSz9Jtze5TVrA" base_Port="_cPRfkKc7EeSz9Jtze5TVrA" direction="out"/>
+  <PortAndFlows:FlowPort xmi:id="_otabQKc7EeSz9Jtze5TVrA" base_Port="_otTGgKc7EeSz9Jtze5TVrA" direction="in"/>
+  <PortAndFlows:FlowPort xmi:id="_r5hx8Kc7EeSz9Jtze5TVrA" base_Port="_r5adMKc7EeSz9Jtze5TVrA" direction="out"/>
+  <PortAndFlows:FlowPort xmi:id="_0fVxMKc7EeSz9Jtze5TVrA" base_Port="_0fN1YKc7EeSz9Jtze5TVrA" direction="in"/>
+  <Blocks:Unit xmi:id="_ZmaXkKeWEeSRN7th8csslQ" base_InstanceSpecification="_ZmWGIKeWEeSRN7th8csslQ" dimension="_wTCbwKcuEeSz9Jtze5TVrA"/>
+  <Blocks:Unit xmi:id="_aPmegKeWEeSRN7th8csslQ" base_InstanceSpecification="_aPi0IKeWEeSRN7th8csslQ" dimension="_wTCbwKcuEeSz9Jtze5TVrA"/>
+  <Blocks:ValueType xmi:id="_ilAqQKeWEeSRN7th8csslQ" base_DataType="_ik6joKeWEeSRN7th8csslQ" unit="_ZmaXkKeWEeSRN7th8csslQ" dimension="_wTCbwKcuEeSz9Jtze5TVrA"/>
+  <Requirements:Satisfy xmi:id="_yjfbYKfyEeSg547Sclbcng" base_Abstraction="_yjD9kKfyEeSg547Sclbcng"/>
+  <Requirements:Requirement xmi:id="__6l_YKfyEeSg547Sclbcng" text="The user shall be able to listen to the radio at any time" id="REQ_013" base_Class="__6c1cKfyEeSg547Sclbcng"/>
+  <Requirements:Satisfy xmi:id="_MkZYgKfzEeSg547Sclbcng" base_Abstraction="_MkRcsKfzEeSg547Sclbcng"/>
+  <Requirements:Satisfy xmi:id="_Noc2gKfzEeSg547Sclbcng" base_Abstraction="_NoU6sKfzEeSg547Sclbcng"/>
+  <Requirements:Requirement xmi:id="_R6sHwKfzEeSg547Sclbcng" text="The right time shall be displayed by the alarm clock at any time" id="REQ_014" base_Class="_R6n2UKfzEeSg547Sclbcng"/>
+  <Requirements:Satisfy xmi:id="_cES1AKfzEeSg547Sclbcng" base_Abstraction="_cEK5MKfzEeSg547Sclbcng"/>
+  <Requirements:Satisfy xmi:id="_vqyTcKfzEeSg547Sclbcng" base_Abstraction="_vqq-sKfzEeSg547Sclbcng"/>
+  <Requirements:Satisfy xmi:id="_wHxKYKfzEeSg547Sclbcng" base_Abstraction="_wHqcsKfzEeSg547Sclbcng"/>
+  <Documentation:Documentation xmi:id="_JC2H4Kf0EeSg547Sclbcng" base_Comment="_JBYIQKf0EeSg547Sclbcng"/>
+  <Documentation:Documentation xmi:id="_MtsB8Kf0EeSg547Sclbcng" base_Comment="_Mtra4Kf0EeSg547Sclbcng"/>
+  <Documentation:Documentation xmi:id="_O81aEKf0EeSg547Sclbcng" base_Comment="_O80zAKf0EeSg547Sclbcng"/>
+  <Documentation:Documentation xmi:id="_R8xV8Kf0EeSg547Sclbcng" base_Comment="_R8wu4Kf0EeSg547Sclbcng"/>
+  <Documentation:Documentation xmi:id="_fy2U8Kf0EeSg547Sclbcng" base_Comment="_fy1t4Kf0EeSg547Sclbcng"/>
+  <Documentation:Documentation xmi:id="_kAA48Kf0EeSg547Sclbcng" base_Comment="_kAAR4Kf0EeSg547Sclbcng"/>
+</xmi:XMI>
